@@ -72,7 +72,7 @@ Minimum hardware specifications:
 1. Clone the project repository to your local system:
 
    ```
-   git clone https://github.com/yourusername/batch_data_pipeline.git
+   git clone https://github.com/Mitali25798/batch-data-pipeline.git
    cd batch_data_pipeline
    ```
 
