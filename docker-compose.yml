@@ -1,0 +1,24 @@
+services:
+  ingestion:
+    build: ./ingestion
+    container_name: ingestion_service
+    volumes:
+      - ./data:/app/data
+    working_dir: /app
+    command: python ingest.py
+
+  preprocessing:
+    build: ./preprocessing
+    container_name: preprocessing_service
+    volumes:
+      - ./data:/app/data
+    working_dir: /app
+    command: python preprocess.py
+
+  aggregation:
+    build: ./aggregation
+    container_name: aggregation_service
+    volumes:
+      - ./data:/app/data
+    working_dir: /app
+    command: spark-submit aggregate.py
